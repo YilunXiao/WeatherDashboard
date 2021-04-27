@@ -5,7 +5,7 @@ var jumbotron = $(".jumbotron");
 
 
 // VARIABLES
-var owRequestURL = "http://api.openweathermap.org/data/2.5";
+var owRequestURL = "https://api.openweathermap.org/data/2.5";
 var requestForcast = "/forecast?q=";
 var requestWeather = "/weather?q=";
 var requestUVI = "/uvi?";
@@ -62,6 +62,7 @@ function getUVIndex(weather) {
             // Set UV index in jumbotron
             // 0-2 Favorable, 3-5 moderate, 6+ severe
             jumbotron.children("#uvInd").text("UV Index: " + data.value);
+            // console.log(data);
         });
 }
 
